@@ -8,23 +8,44 @@ import { LoginComponent } from './common/components/login/login.component';
 import { FooterComponent } from './common/components/footer/footer.component';
 import { HeaderComponent } from './common/components/header/header.component';
 import { PrimeNgModule } from './common/modules/prime-ng.module';
-import { ButtonModule } from 'primeng/button';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
-  declarations: [
+  declarations :[
     AppComponent,
     LoginComponent,
     FooterComponent,
     HeaderComponent
   ],
-  imports: [
+  imports : [
     BrowserModule,
-    BrowserAnimationsModule,
-    AppRoutingModule,
-    PrimeNgModule,
-    ButtonModule
+    CommonModule,
+        BrowserAnimationsModule,
+        AppRoutingModule,
+        PrimeNgModule,
+        
+        HttpClientModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers : [],
+  bootstrap:[AppComponent]
 })
+
+// @NgModule({
+//   declarations: [
+//     AppComponent,
+//     LoginComponent,
+//     FooterComponent,
+//     HeaderComponent
+//   ],
+//   imports: [
+//     BrowserModule
+//     BrowserAnimationsModule,
+//     AppRoutingModule,
+//     PrimeNgModule
+//   ],
+//   providers: [],
+//   bootstrap: [AppComponent]
+// })
 export class AppModule { }
